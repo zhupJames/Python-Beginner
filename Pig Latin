@@ -1,11 +1,13 @@
+#This is a game that translate a word to Pig Latin
+
 def PigLatin():
 	print("Pig Latin")
-	word = input("Type your word.")
-	if word.isnumeric():
-		print("This is not a word. Please enter a word.")
-		PigLatin()
-	else:
+	word = input("Please type a word.")
+	if word.isalpha():
 		n = len(word)
 		print(word[1:n] + word[0] + "ay")
+	else:
+		print("This is not a word. Please enter a word.")
+		PigLatin()
 
 PigLatin()
