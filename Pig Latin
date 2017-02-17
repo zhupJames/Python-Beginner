@@ -7,3 +7,5 @@ def PigLatin():
 	else:
 		n = len(word)
 		print(word[1:n] + word[0] + "ay")
+
+PigLatin()
