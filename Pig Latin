@@ -1,0 +1,9 @@
+def PigLatin():
+	print("Pig Latin")
+	word = input("Type your word.")
+	if word.isnumeric():
+		print("This is not a word. Please enter a word.")
+		PigLatin()
+	else:
+		n = len(word)
+		print(word[1:n] + word[0] + "ay")
