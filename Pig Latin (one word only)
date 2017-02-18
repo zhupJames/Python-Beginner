@@ -1,4 +1,4 @@
-#This is a game that translate a word to Pig Latin
+#This is a game that translate a word to Pig Latin (One word only)
 
 def PigLatin():
 	print("Pig Latin")
