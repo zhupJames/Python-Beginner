@@ -1,0 +1,25 @@
+def PigLatin():
+    print("Pig Latin")
+    Sentence = input("Please type a sentence in alphabet and no punctuation.")
+    splitsent = Sentence.split(" ")
+    n = len(splitsent)
+    wordn = 0
+    test = ""
+    while(wordn < n):
+        test = test + splitsent[wordn]
+        wordn +=1
+    if test.isalpha():
+        count = 0
+        sent = ""
+        while(count < n):
+            word = splitsent[count]
+            length = len(word)
+            word = word[1:length] + word[0] +"ay"
+            sent = sent + " " + word
+            count +=1
+        print(sent[1:len(sent)])
+    else:
+        print("This sentence is not in alphabet, or it has punctuations. Please re-enter a sentence.")
+        PigLatin()
+
+PigLatin()
