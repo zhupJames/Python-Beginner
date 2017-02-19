@@ -8,7 +8,7 @@ def PigLatin():
     while(wordn < n):
         test = test + splitsent[wordn]
         wordn +=1
-    if test.isalpha():
+    if len(test) > 0 and test.isalpha():
         count = 0
         sent = ""
         while(count < n):
@@ -18,6 +18,9 @@ def PigLatin():
             sent = sent + " " + word
             count +=1
         print(sent[1:len(sent)])
+    else if len(test) == 0:
+        print("There is no sentence. Please type a sentence.")
+        Piglatin()
     else:
         print("This sentence is not in alphabet, or it has punctuations. Please re-enter a sentence.")
         PigLatin()
