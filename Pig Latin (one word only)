@@ -3,9 +3,11 @@
 def PigLatin():
 	print("Pig Latin")
 	word = input("Please type a word.")
+	pyg = "ay"
 	if len(word) > 0 and word.isalpha():
 		n = len(word)
-		print(word[1:n] + word[0] + "ay")
+		word = word.lower()
+		print(word[1:n] + word[0] + pyg)
 	else if len(word) == 0:
 		print("There is no word. Please type a word.")
 		PigLatin()
